@@ -15,8 +15,8 @@
 
 To execute a Python script directly from the terminal, mark it as executable:
 
-chmod +x xxx.py
-./xxx.py
+`chmod +x xxx.py` 
+`./xxx.py`
 
 ---
 
@@ -24,7 +24,7 @@ chmod +x xxx.py
 
 ### Usage 1: Display Help
 
-python3 pyboard_sync.py -h
+`python3 pyboard_sync.py -h`
 
 ### Usage 2: Upload Programs and Reboot
 
@@ -35,7 +35,7 @@ python3 pyboard_sync.py -h
 
 - **Command:**
 
-python3 pyboard_sync.py -p /port_to_pyboard
+`python3 pyboard_sync.py -p /port_to_pyboard`
 
 ### Usage 3: Upload Programs and Activate Serial Monitor
 
@@ -44,7 +44,7 @@ python3 pyboard_sync.py -p /port_to_pyboard
 
 - **Command:**
 
-python3 pyboard_sync.py -p /port_to_pyboard -sm
+`python3 pyboard_sync.py -p /port_to_pyboard -sm`
 
 ---
 
@@ -52,7 +52,7 @@ python3 pyboard_sync.py -p /port_to_pyboard -sm
 
 ### Usage 1: Display Help
 
-python3 pyboard_sm.py -h
+`python3 pyboard_sm.py -h`
 
 ### Usage 2: Activate Serial Monitor
 
@@ -61,7 +61,7 @@ python3 pyboard_sm.py -h
 
 - **Command:**
 
-python3 pyboard_sm.py -p /port_to_pyboard
+`python3 pyboard_sm.py -p /port_to_pyboard`
 
 ---
 
@@ -69,7 +69,7 @@ python3 pyboard_sm.py -p /port_to_pyboard
 
 ### Usage 1: Display Help
 
-python3 pyboard_reboot.py -h
+`python3 pyboard_reboot.py -h`
 
 ### Usage 2: Reboot the Pyboard
 
@@ -78,4 +78,4 @@ python3 pyboard_reboot.py -h
 
 - **Command:**
 
-python3 pyboard_reboot.py -p /port_to_pyboard
+`python3 pyboard_reboot.py -p /port_to_pyboard`
