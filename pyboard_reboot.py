@@ -26,7 +26,7 @@ if __name__ == "__main__":
             print_like_GPT('python3 pyboard_reboot.py [-h|-help]\n\n', bcolors.color256(fg=229))
 
             print_like_GPT('Example2. To upload programs to your /pyboard:\n', bcolors.color256(fg=229))
-            print_like_GPT('python3 pyboard_reboot.py [-p|-port] /port_to_pyboard\n\n', bcolors.color256(fg=229))
+            print_like_GPT('python3 pyboard_reboot.py [-p|-port] /port_to_pyboard\n', bcolors.color256(fg=229))
             print_like_GPT('/*************************************************************/\n', bcolors.OKCYAN)
 
             os._exit(0)
@@ -45,9 +45,6 @@ if __name__ == "__main__":
         else:
             print_like_GPT(SystemHeader + 'Invalid arguments\n', bcolors.FAIL)
             os._exit(0)
-
-
-
 
 
     pyboard_soft_reset(port)
