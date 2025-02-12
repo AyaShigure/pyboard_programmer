@@ -17,6 +17,7 @@ To execute a Python script directly from the terminal, mark it as executable:
 
 `chmod +x xxx.py` 
 
+
 ---
 
 ## pyboard_sync.py
