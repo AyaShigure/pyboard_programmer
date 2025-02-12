@@ -1,36 +1,81 @@
-# Pyboard embedded software tool
+# Pyboard Embedded Software Tool
 
-Tip:
-Use `chmod +x xxx.py` to directely execute with `./xxxx.py` from terminal.
+## Known Bug: MMXXV-II-XII
 
+- **Issue:**
+  When a valid port path is provided, the rshell returns a fail message.
+  Despite this, the program continues running and ultimately returns the message ALL NORMAL.
 
-# pyboard_sync.py
-### Usage 1: 
-Call for help.
-`python3 pyboard_sync.py -h`
+- **Workaround:**
+  Ensure that the port passed in is correct.
 
-### Usage 2: 
-Upload all programs under /pico_src, pyboard will be rebooted once this is done. Then the pyboard will execute main.py after first reboot.
-`python3 pyboard_sync.py -p /port_to_pybord`
+---
 
-### Usage 3: 
-Upload all programs under /pico_src, then activate the serial monitor.
-`python3 pyboard_sync.py -p /port_to_pybord -sm`
+## Execution Tip
 
-# pyboard_sync.py
-### Usage 1: 
-Call for help.
-`python3 pyboard_sm.py -h`
+To execute a Python script directly from the terminal, mark it as executable:
 
-### Usage 2: 
-Activate the serial monitor.
-`python3 pyboard_sm.py -p /port_to_pybord`
+chmod +x xxx.py
+./xxx.py
 
-# pyboard_reboot.py
-### Usage 1: 
-Call for help.
-`python3 pyboard_reboot.py -h`
+---
 
-### Usage 2: 
-Reboot the pyboard
-`python3 pyboard_reboot.py -p /port_to_pybord`
+## pyboard_sync.py
+
+### Usage 1: Display Help
+
+python3 pyboard_sync.py -h
+
+### Usage 2: Upload Programs and Reboot
+
+- **Description:**
+  This command uploads all programs under the /pico_src directory.
+  Once the upload is complete, the pyboard is automatically rebooted.
+  After the first reboot, the pyboard will execute main.py.
+
+- **Command:**
+
+python3 pyboard_sync.py -p /port_to_pyboard
+
+### Usage 3: Upload Programs and Activate Serial Monitor
+
+- **Description:**
+  This command uploads all programs under /pico_src and then activates the serial monitor.
+
+- **Command:**
+
+python3 pyboard_sync.py -p /port_to_pyboard -sm
+
+---
+
+## pyboard_sm.py
+
+### Usage 1: Display Help
+
+python3 pyboard_sm.py -h
+
+### Usage 2: Activate Serial Monitor
+
+- **Description:**
+  Activates the serial monitor for the specified pyboard.
+
+- **Command:**
+
+python3 pyboard_sm.py -p /port_to_pyboard
+
+---
+
+## pyboard_reboot.py
+
+### Usage 1: Display Help
+
+python3 pyboard_reboot.py -h
+
+### Usage 2: Reboot the Pyboard
+
+- **Description:**
+  Reboots the pyboard connected to the specified port.
+
+- **Command:**
+
+python3 pyboard_reboot.py -p /port_to_pyboard
