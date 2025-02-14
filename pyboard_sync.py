@@ -40,13 +40,13 @@ if __name__ == "__main__":
             # help
             print_like_GPT('/*************************************************************/\n', bcolors.OKCYAN)
             print_like_GPT('Example1. To show this help:\n', bcolors.color256(fg=229))
-            print_like_GPT('python3 upload_to_pico.py [-h|-help]\n\n', bcolors.color256(fg=229))
+            print_like_GPT('python3 pyboard_sync.py [-h|-help]\n\n', bcolors.color256(fg=229))
 
             print_like_GPT('Example2. To upload programs to your /pyboard:\n', bcolors.color256(fg=229))
-            print_like_GPT('python3 upload_to_pico.py [-p|-port] /port_to_pyboard\n\n', bcolors.color256(fg=229))
+            print_like_GPT('python3 pyboard_sync.py [-p|-port] /port_to_pyboard\n\n', bcolors.color256(fg=229))
 
             print_like_GPT('Example3. To upload and monitor the serial port:\n', bcolors.color256(fg=229))
-            print_like_GPT('python3 upload_to_pico.py [-p|-h] /port_to_pyboard -sm\n', bcolors.color256(fg=229))
+            print_like_GPT('python3 pyboard_sync.py [-p|-h] /port_to_pyboard -sm\n', bcolors.color256(fg=229))
             print_like_GPT('/*************************************************************/\n', bcolors.OKCYAN)
 
             os._exit(0)

@@ -18,7 +18,7 @@ if __name__ == '__main__':
         if argv[1] in argv_list[0:2]:
             # help
             print_like_GPT(SystemHeader + 'To activate the serial monitor,\n', bcolors.color256(fg=229))
-            print_like_GPT(SystemHeader + 'pass in the target port like \'python sm.py -port /dev/cu.xxxxx\'.\n', bcolors.color256(fg=229))
+            print_like_GPT(SystemHeader + 'pass in the target port like \'python pyboard_sm.py -p /dev/cu.xxxxx\'.\n', bcolors.color256(fg=229))
             os._exit(0)
    
         elif argv[1] in argv_list[2:4]:
