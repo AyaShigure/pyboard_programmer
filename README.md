@@ -95,5 +95,6 @@ To execute a Python script directly from the terminal, mark it as executable:
 
 - **Command:**
 
-`python3 repl.py -p /port_to_pyboard`
+`python3 repl.py -p /port_to_pyboard` 
+
 `python3 repl.py` (This will automatically connect to the pyboard. )
