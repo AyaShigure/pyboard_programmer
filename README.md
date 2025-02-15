@@ -20,11 +20,11 @@ To execute a Python script directly from the terminal, mark it as executable:
 
 ---
 
-## pyboard_sync.py
+## sync.py
 
 ### Usage 1: Display Help
 
-`python3 pyboard_sync.py -h`
+`python3 sync.py -h`
 
 ### Usage 2: Upload Programs and Reboot
 
@@ -35,7 +35,7 @@ To execute a Python script directly from the terminal, mark it as executable:
 
 - **Command:**
 
-`python3 pyboard_sync.py -p /port_to_pyboard`
+`python3 sync.py -p /port_to_pyboard`
 
 ### Usage 3: Upload Programs and Activate Serial Monitor
 
@@ -44,15 +44,15 @@ To execute a Python script directly from the terminal, mark it as executable:
 
 - **Command:**
 
-`python3 pyboard_sync.py -p /port_to_pyboard -sm`
+`python3 sync.py -p /port_to_pyboard -sm`
 
 ---
 
-## pyboard_sm.py
+## sm.py
 
 ### Usage 1: Display Help
 
-`python3 pyboard_sm.py -h`
+`python3 sm.py -h`
 
 ### Usage 2: Activate Serial Monitor
 
@@ -61,15 +61,15 @@ To execute a Python script directly from the terminal, mark it as executable:
 
 - **Command:**
 
-`python3 pyboard_sm.py -p /port_to_pyboard`
+`python3 sm.py -p /port_to_pyboard`
 
 ---
 
-## pyboard_reboot.py
+## reboot.py
 
 ### Usage 1: Display Help
 
-`python3 pyboard_reboot.py -h`
+`python3 reboot.py -h`
 
 ### Usage 2: Reboot the Pyboard
 
@@ -78,4 +78,22 @@ To execute a Python script directly from the terminal, mark it as executable:
 
 - **Command:**
 
-`python3 pyboard_reboot.py -p /port_to_pyboard`
+`python3 reboot.py -p /port_to_pyboard`
+
+---
+
+## repl.py
+
+### Usage 1: Display Help
+
+`python3 repl.py -h`
+
+### Usage 2: Activate repl to the /pyboard
+
+- **Description:**
+  Connect to the pyboard via rshell and activate repl.
+
+- **Command:**
+
+`python3 repl.py -p /port_to_pyboard`
+`python3 repl.py` (This will automatically connect to the pyboard. )

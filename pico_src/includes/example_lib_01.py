@@ -19,4 +19,3 @@ def flash(i):
         pin0.toggle()
         pin1.toggle()
         sleep_ms(100)
-        print("ISEI GOOD AAAAAAAAA")

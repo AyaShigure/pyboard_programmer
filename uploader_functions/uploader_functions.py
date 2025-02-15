@@ -5,10 +5,9 @@ import pyfiglet
 import serial
 import os
 import sys
-version_number = 0.1 # MMXXV-II-XII, one day before the inverview with FANUC corporation.
+version_number = 0.2 # MMXXV-II-XV, a few days after the inverview with FANUC corporation.
 
-''' MMXXV-II-XII, Aya Wang:
-
+''' MMXXV-II-XV, Aya Wang:
     IMPORTANT:
         This function set is for Linux/MacOS hosts device to upload code under /pico_src to RP2040 or other MCUs with Micropython firmware.
         Do not upload this file to /pyboard.
@@ -17,12 +16,12 @@ version_number = 0.1 # MMXXV-II-XII, one day before the inverview with FANUC cor
 def fancy_print():
     ascii_art = pyfiglet.figlet_format("DAYDAWNDREAM", font="big", width = 100)
     print_like_GPT(ascii_art)
-    print_like_GPT('/*****************************************/\n', bcolors.OKCYAN)
-    print_like_GPT('A Micropython file system syncing tool\n', bcolors.OKCYAN)
-    print_like_GPT('for RP2040/ESP series MCUs.\n', bcolors.OKCYAN)
-    print_like_GPT(f'...MMXXV-II-XII...Version {version_number}...\n', bcolors.OKCYAN)
-    print_like_GPT('Created by Aya Wang, DAYDAWNDREAM Studio.\n', bcolors.OKCYAN)
-    print_like_GPT('/*****************************************/\n\n', bcolors.OKCYAN)
+    print_like_GPT('/*******************************************/\n', bcolors.OKCYAN)
+    print_like_GPT('  A Micropython file system syncing tool\n', bcolors.OKCYAN)
+    print_like_GPT('       for RP2040/ESP series MCUs.\n', bcolors.OKCYAN)
+    print_like_GPT(f'     ...MMXXV-II-XII...Version {version_number}...\n', bcolors.OKCYAN)
+    print_like_GPT('  Created by Aya Wang, DAYDAWNDREAM Studio.\n', bcolors.OKCYAN)
+    print_like_GPT('/*******************************************/\n\n', bcolors.OKCYAN)
 
 
 # Utilities
@@ -51,15 +50,14 @@ def PrintMBPM4Header(default_print = False):
         print_like_GPT(headerString + 'Initiallizing\n', bcolors.color256(fg=193))
     return headerString
 
-
 def print_like_GPT(text, color=bcolors.ENDC):
     for i,char in enumerate(text):
         print(f"{color}{char}\u2588{bcolors.ENDC}", end="", flush=True)
-        time.sleep(0.0009)
+        time.sleep(0.0005)
 
         if i < len(text) - 1:
             print('\b \b', end='', flush=True)
-    time.sleep(0.01) 
+    time.sleep(0.001) 
 
     print('\b \b', end='', flush=True) 
 

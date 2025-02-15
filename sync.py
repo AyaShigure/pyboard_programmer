@@ -40,13 +40,13 @@ if __name__ == "__main__":
             # help
             print_like_GPT('/*************************************************************/\n', bcolors.OKCYAN)
             print_like_GPT('Example1. To show this help:\n', bcolors.color256(fg=229))
-            print_like_GPT('python3 pyboard_sync.py [-h|-help]\n\n', bcolors.color256(fg=229))
+            print_like_GPT('python3 sync.py [-h|-help]\n\n', bcolors.color256(fg=229))
 
             print_like_GPT('Example2. To upload programs to your /pyboard:\n', bcolors.color256(fg=229))
-            print_like_GPT('python3 pyboard_sync.py [-p|-port] /port_to_pyboard\n\n', bcolors.color256(fg=229))
+            print_like_GPT('python3 sync.py [-p|-port] /port_to_pyboard\n\n', bcolors.color256(fg=229))
 
             print_like_GPT('Example3. To upload and monitor the serial port:\n', bcolors.color256(fg=229))
-            print_like_GPT('python3 pyboard_sync.py [-p|-h] /port_to_pyboard -sm\n', bcolors.color256(fg=229))
+            print_like_GPT('python3 sync.py [-p|-h] /port_to_pyboard -sm\n', bcolors.color256(fg=229))
             print_like_GPT('/*************************************************************/\n', bcolors.OKCYAN)
 
             os._exit(0)
@@ -70,6 +70,7 @@ if __name__ == "__main__":
     os.system("clear")
     # Upload via rshell
     try:
+        fancy_print()
         print_like_GPT(PyboardHeaderString + 'Clearing the existing file tree.\n', bcolors.color256(fg=229))
         os.system(f"rshell -p {port} rm -r /pyboard/*")
         print_like_GPT(PyboardHeaderString + 'Uploading the new file tree.\n', bcolors.color256(fg=229))
@@ -85,7 +86,7 @@ if __name__ == "__main__":
         os.system('clear')
         print_like_GPT(PyboardHeaderString + "Embedded system is updated.\n", bcolors.FAIL)
         print_like_GPT(PyboardHeaderString + "System rebooted.\n\n", bcolors.FAIL)
-        print_like_GPT(".DAYDAWNDREAM Studio 2025.\n\n", bcolors.color256(fg=224))
+        print_like_GPT(" .DAYDAWNDREAM Studio 2025.\n\n", bcolors.color256(fg=224))
 
     except Exception as e:
         print_like_GPT(SystemHeader + "Unable to upload. Please check the serial port/connection.\n", bcolors.FAIL)
